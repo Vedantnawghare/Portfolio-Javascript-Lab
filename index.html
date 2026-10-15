@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedant Nawghare | AI/ML Engineer &amp; Researcher</title>
+  
+  <!-- Meta & SEO -->
+  <meta name="description" content="Vedant Nawghare — CSE Data Science undergraduate, AI/ML practitioner, backend developer, and published IEEE researcher based in Nagpur, India.">
+  <meta name="keywords" content="Vedant Nawghare, AI ML Engineer, Data Science, Deepfake Voice Detection, AgriChain AI, IEEE TEMSMET 2025, Symbiosis Institute of Technology">
+  <meta name="author" content="Vedant Nawghare">
+  <meta name="theme-color" content="#0b0c10">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vedant Nawghare | AI/ML Engineer &amp; Researcher">
+  <meta property="og:description" content="CSE Data Science undergraduate building intelligent applications, reliable backend systems, and research-driven solutions.">
+  <meta property="og:image" content="assets/images/vedant_profile.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Vedant Nawghare | AI/ML Engineer &amp; Researcher">
+  <meta property="twitter:description" content="CSE Data Science undergraduate, AI/ML practitioner, backend developer, and published IEEE researcher.">
+
+  <!-- Favicon Monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0c10'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='46' fill='%23bbf44a'>VN</text></svg>">
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas 2D Ambient Spatial Field -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Custom Cursor Glow Follower (Desktop Only) -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVIGATION BAR -->
+  <header id="site-header" class="site-header">
+    <div class="header-inner container">
+      <!-- Monogram Wordmark -->
+      <a href="#hero" class="brand-wordmark" aria-label="Vedant Nawghare - Home">
+        <span class="brand-monogram">VN</span>
+        <span class="brand-name">VEDANT NAWGHARE</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#research" class="nav-link">Research</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#achievements" class="nav-link">Milestones</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <!-- Live IST Clock Indicator -->
+        <div class="ist-clock-pill" title="Indian Standard Time (Nagpur, Maharashtra)">
+          <span class="status-dot"></span>
+          <span id="ist-time-nav" class="ist-time-text">--:--:-- IST</span>
+        </div>
+
+        <!-- Prominent Resume CTA -->
+        <a href="assets/resume.pdf" download="Vedant_Nawghare_Resume.pdf" class="btn btn-outline btn-sm resume-btn" id="nav-resume-btn" target="_blank" rel="noopener noreferrer">
+          <span>Resume</span>
+          <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide Drawer -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#work" class="mobile-nav-link">Work</a></li>
+          <li><a href="#research" class="mobile-nav-link">Research &amp; Patents</a></li>
+          <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+          <li><a href="#education" class="mobile-nav-link">Education</a></li>
+          <li><a href="#skills" class="mobile-nav-link">Technical Skills</a></li>
+          <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+          <li><a href="#certificates" class="mobile-nav-link">Certificates</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+          <a href="assets/resume.pdf" download="Vedant_Nawghare_Resume.pdf" class="btn btn-primary w-full" target="_blank">
+            <span>Download Resume (PDF)</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero-section" aria-label="Introduction">
+      <div class="hero-inner container">
+        
+        <!-- Left Hero Content Column -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="live-pulse-badge"></span>
+            <span class="eyebrow-text">DATA SCIENCE UNDERGRADUATE · AI/ML · RESEARCH</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">I BUILD</span>
+            <span class="title-line gradient-text">SYSTEMS THAT</span>
+            <span class="title-line highlight-text">THINK.</span>
+          </h1>
+
+          <p class="hero-description">
+            I'm <strong>Vedant Nawghare</strong> — a CSE Data Science undergraduate building intelligent applications, reliable backend systems, and research-driven solutions to real-world problems.
+          </p>
+
+          <!-- Three Specialisations -->
+          <div class="hero-tags" aria-label="Core Competencies">
+            <span class="spec-tag"><span class="tag-hash">#</span> ARTIFICIAL INTELLIGENCE</span>
+            <span class="spec-tag"><span class="tag-hash">#</span> BACKEND ENGINEERING</span>
+            <span class="spec-tag"><span class="tag-hash">#</span> APPLIED RESEARCH</span>
+          </div>
+
+          <!-- Availability Statement -->
+          <div class="hero-availability">
+            <span class="dot-available"></span>
+            <span class="availability-text">OPEN TO MEANINGFUL TECHNICAL OPPORTUNITIES</span>
+          </div>
+
+          <!-- Actions -->
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary hero-cta-primary">
+              <span>EXPLORE MY WORK</span>
+              <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+            <a href="assets/resume.pdf" download="Vedant_Nawghare_Resume.pdf" class="btn btn-secondary hero-cta-secondary" target="_blank" rel="noopener noreferrer">
+              <span>DOWNLOAD RESUME</span>
+              <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <!-- Hero Time & Location Metric -->
+          <div class="hero-time-badge">
+            <div class="time-item">
+              <span class="time-label">LOCAL RUNTIME</span>
+              <span id="hero-clock" class="time-val">--:--:-- IST</span>
+            </div>
+            <div class="time-divider"></div>
+            <div class="time-item">
+              <span class="time-label">BASE LOCATION</span>
+              <span class="time-val">Nagpur, Maharashtra (IN)</span>
+            </div>
+            <div class="time-divider"></div>
+            <div class="time-item">
+              <span class="time-label">ACADEMIC CGPA</span>
+              <span class="time-val highlight-val">8.125 / 10.0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Column: Interactive CSS 3D Neural Core -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="neural-scene-wrapper" id="neural-scene">
+            <div class="spatial-grid-floor"></div>
+            
+            <!-- 3D Transform Object Rig -->
+            <div class="neural-core-rig" id="core-rig">
+              
+              <!-- Orbital Ring 1 -->
+              <div class="ring ring-outer">
+                <div class="satellite sat-1"></div>
+                <div class="satellite sat-2"></div>
+              </div>
+
+              <!-- Orbital Ring 2 (Cross Inclination) -->
+              <div class="ring ring-middle">
+                <div class="satellite sat-3"></div>
+              </div>
+
+              <!-- Orbital Ring 3 (Equatorial) -->
+              <div class="ring ring-inner">
+                <div class="satellite sat-4"></div>
+              </div>
+
+              <!-- Central Glowing Neural Nucleus -->
+              <div class="core-nucleus">
+                <div class="nucleus-core"></div>
+                <div class="nucleus-glow"></div>
+                <div class="nucleus-mesh"></div>
+              </div>
+
+              <!-- 3D Translucent HUD Diagnostics Panels -->
+              <div class="spatial-card card-hud-1">
+                <div class="hud-header">
+                  <span class="hud-status-led"></span>
+                  <span class="hud-title">NEURAL ENGINE // ONLINE</span>
+                </div>
+                <div class="hud-metric-row">
+                  <span class="hud-key">Model</span>
+                  <span class="hud-val">StackingEnsemble v2.6</span>
+                </div>
+                <div class="hud-metric-row">
+                  <span class="hud-key">Accuracy</span>
+                  <span class="hud-val text-lime">94.5%</span>
+                </div>
+                <div class="hud-metric-row">
+                  <span class="hud-key">F1 / AUC</span>
+                  <span class="hud-val">0.963 / 0.985</span>
+                </div>
+              </div>
+
+              <div class="spatial-card card-hud-2">
+                <div class="hud-header">
+                  <span class="hud-status-led led-cyan"></span>
+                  <span class="hud-title">AUDIO BUFFER ENGINE</span>
+                </div>
+                <div class="hud-metric-row">
+                  <span class="hud-key">Throughput</span>
+                  <span class="hud-val text-cyan">Real-time PCM</span>
+                </div>
+                <div class="hud-metric-row">
+                  <span class="hud-key">Sync Protocol</span>
+                  <span class="hud-val">WebSockets + FastAPI</span>
+                </div>
+                <div class="hud-metric-row">
+                  <span class="hud-key">Queue State</span>
+                  <span class="hud-val">Bounded · Overflow-Safe</span>
+                </div>
+              </div>
+
+              <div class="spatial-card card-hud-3">
+                <div class="hud-header">
+                  <span class="hud-status-led led-amber"></span>
+                  <span class="hud-title">REDIS &amp; SQLITE CACHING</span>
+                </div>
+                <div class="hud-metric-row">
+                  <span class="hud-key">Strategy</span>
+                  <span class="hud-val">Cache-Aside / Write-Through</span>
+                </div>
+                <div class="hud-metric-row">
+                  <span class="hud-key">Latency</span>
+                  <span class="hud-val text-lime">&lt; 1.4ms</span>
+                </div>
+              </div>
+
+              <!-- Neural Connection Nodes & Light Beams -->
+              <div class="neural-node node-a"></div>
+              <div class="neural-node node-b"></div>
+              <div class="neural-node node-c"></div>
+              <div class="neural-node node-d"></div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Subtle Scroll Down Indicator -->
+      <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to About section">
+        <span class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </span>
+        <span class="scroll-text">SCROLL TO DISCOVER</span>
+      </a>
+    </section>
+
+    <!-- 2. TICKER MARQUEE -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>MACHINE LEARNING</span><span class="marquee-sep">◆</span>
+          <span>DISTRIBUTED BACKENDS</span><span class="marquee-sep">◆</span>
+          <span>RESEARCH &amp; PATENTS</span><span class="marquee-sep">◆</span>
+          <span>ENSEMBLE REGRESSORS</span><span class="marquee-sep">◆</span>
+          <span>DEEPFAKE DETECTION</span><span class="marquee-sep">◆</span>
+          <span>FASTAPI &amp; REDIS</span><span class="marquee-sep">◆</span>
+          <span>8.125 CGPA · SIT NAGPUR</span><span class="marquee-sep">◆</span>
+          <span>IEEE TEMSMET 2025</span><span class="marquee-sep">◆</span>
+          <span>DOCKER &amp; PYTEST</span><span class="marquee-sep">◆</span>
+          <span>TEAM CAPTAINCY</span><span class="marquee-sep">◆</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>MACHINE LEARNING</span><span class="marquee-sep">◆</span>
+          <span>DISTRIBUTED BACKENDS</span><span class="marquee-sep">◆</span>
+          <span>RESEARCH &amp; PATENTS</span><span class="marquee-sep">◆</span>
+          <span>ENSEMBLE REGRESSORS</span><span class="marquee-sep">◆</span>
+          <span>DEEPFAKE DETECTION</span><span class="marquee-sep">◆</span>
+          <span>FASTAPI &amp; REDIS</span><span class="marquee-sep">◆</span>
+          <span>8.125 CGPA · SIT NAGPUR</span><span class="marquee-sep">◆</span>
+          <span>IEEE TEMSMET 2025</span><span class="marquee-sep">◆</span>
+          <span>DOCKER &amp; PYTEST</span><span class="marquee-sep">◆</span>
+          <span>TEAM CAPTAINCY</span><span class="marquee-sep">◆</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. ABOUT SECTION -->
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">01</span>
+          <span class="badge-label">ABOUT VEDANT</span>
+        </div>
+
+        <h2 id="about-heading" class="section-title reveal-item">
+          Curious by nature.<br>
+          <span class="highlight-text">An engineer by practice.</span>
+        </h2>
+
+        <!-- Asymmetric Editorial Grid -->
+        <div class="about-grid">
+          
+          <!-- Narrative Bio Card -->
+          <div class="about-card bio-card tilt-card reveal-item" data-tilt>
+            <div class="card-inner">
+              <div class="avatar-row">
+                <img src="assets/images/vedant_profile.jpg" alt="Vedant Dinesh Nawghare" class="bio-avatar" onerror="this.style.display='none'">
+                <div>
+                  <h3 class="bio-name">Vedant Dinesh Nawghare</h3>
+                  <p class="bio-title">CSE Data Science Undergraduate &amp; AI Practitioner</p>
+                  <p class="bio-loc">Nagpur, Maharashtra, India</p>
+                </div>
+              </div>
+
+              <div class="bio-paragraphs">
+                <p>
+                  I am a Computer Science and Engineering — Data Science undergraduate at <strong>Symbiosis Institute of Technology, Nagpur</strong> (2024–2028). My work unites rigorous artificial intelligence research with robust backend software engineering.
+                </p>
+                <p>
+                  I focus on designing systems that make reasoned, explainable decisions: from <em>ensemble regressor architectures</em> for agricultural market forecasting, to <em>hybrid acoustic-linguistic models</em> for deepfake voice detection, to high-throughput producer-consumer audio pipelines.
+                </p>
+                <p>
+                  My engineering philosophy is simple: understand the core algorithms deeply, benchmark ruthlessly, write modular backend code, and deliver real-world software that solves tangible problems for users.
+                </p>
+              </div>
+
+              <!-- Philosophy Pill -->
+              <div class="philosophy-pill">
+                <span class="phi-label">PHILOSOPHY</span>
+                <span class="phi-mantra">LEARN · BUILD · RESEARCH · REPEAT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic & Identity Metrics Column -->
+          <div class="about-aside reveal-item">
+            
+            <!-- Quick Spec Table -->
+            <div class="about-card spec-card tilt-card" data-tilt>
+              <h4 class="card-title-sm">CORE IDENTIFIERS</h4>
+              <ul class="spec-list">
+                <li class="spec-row">
+                  <span class="spec-name">Degree</span>
+                  <span class="spec-value">B.Tech in CSE — Data Science</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-name">Institution</span>
+                  <span class="spec-value">Symbiosis Institute of Technology</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-name">Graduation</span>
+                  <span class="spec-value">2024 – 2028</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-name">Academic CGPA</span>
+                  <span class="spec-value text-lime font-mono">8.125 / 10.0</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-name">Focus Areas</span>
+                  <span class="spec-value">AI/ML · Distributed Backends · NLP</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-name">Leadership</span>
+                  <span class="spec-value text-cyan">Captain, AI/ML (UpToSkills)</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Interactive Terminal Diagnostic Widget -->
+            <div class="about-card terminal-card" id="terminal-widget">
+              <div class="terminal-bar">
+                <div class="term-dots">
+                  <span class="tdot red"></span>
+                  <span class="tdot yellow"></span>
+                  <span class="tdot green"></span>
+                </div>
+                <div class="term-title font-mono">vedant@sit-nagpur:~</div>
+              </div>
+              <div class="terminal-body font-mono" id="terminal-output">
+                <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+                <div class="t-res text-lime">Vedant Nawghare [AI/ML Engineer, B.Tech CSE-DS]</div>
+                <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">status --system</span></div>
+                <div class="t-res text-cyan">Kernel: Active | CGPA: 8.125 | Research: IEEE Published</div>
+                <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+              </div>
+              <div class="terminal-controls">
+                <button class="term-btn" data-cmd="whoami">whoami</button>
+                <button class="term-btn" data-cmd="skills">skills.json</button>
+                <button class="term-btn" data-cmd="patents">patents</button>
+                <button class="term-btn" data-cmd="clear">clear</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. FEATURED PROJECTS SECTION -->
+    <section id="work" class="section work-section" aria-labelledby="work-heading">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <div class="section-badge reveal-item">
+              <span class="badge-index">02</span>
+              <span class="badge-label">FEATURED PROJECTS</span>
+            </div>
+            <h2 id="work-heading" class="section-title reveal-item">
+              Selected work.<br>
+              <span class="highlight-text">Real problems. Engineered solutions.</span>
+            </h2>
+          </div>
+          <p class="section-subtitle reveal-item">
+            Each project addresses an authentic engineering challenge with measured architecture, clean code, and documented outcomes.
+          </p>
+        </div>
+
+        <!-- Filter Navigation Tabs -->
+        <div class="project-filter-bar reveal-item" role="tablist" aria-label="Project Categories">
+          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="all">All Systems (6)</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="ai-ml">AI &amp; Machine Learning</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="backend">Backend &amp; Infrastructure</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="fullstack">Full-Stack &amp; Applied</button>
+        </div>
+
+        <!-- Projects Grid (Asymmetric & Layered) -->
+        <div class="projects-container">
+
+          <!-- PROJECT A: AgriChain AI -->
+          <article class="project-card tilt-card reveal-item" data-category="ai-ml fullstack" data-tilt>
+            <div class="project-card-grid">
+              
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="proj-badge badge-solo">SOLO ARCHITECTURE</span>
+                  <span class="proj-category">AGRICULTURAL DECISION-SUPPORT</span>
+                </div>
+                <h3 class="project-title">AgriChain AI — Smart Harvest &amp; Market Intelligence</h3>
+                <p class="project-desc">
+                  A solo agricultural decision-support system that combines real-time weather forecasts, mandi price trends, soil indicators, logistics costs, and spoilage risk to recommend optimal harvest windows, target markets, and preservation actions.
+                </p>
+
+                <div class="project-highlight-box">
+                  <div class="ph-item">
+                    <span class="ph-label">Problem</span>
+                    <span class="ph-val">Distress crop selling due to price volatility, unpredictable weather, and lack of localized spoilage modeling.</span>
+                  </div>
+                  <div class="ph-item">
+                    <span class="ph-label">Engineering</span>
+                    <span class="ph-val">Engineered a lightweight, explainable rule-based intelligence engine using Agmarknet and OpenWeather API with multilingual farmer workflows in English, Hindi, and Marathi.</span>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Next.js</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">OpenWeather API</span>
+                  <span class="tag">Agmarknet Data</span>
+                  <span class="tag">Rule-Based AI</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/Vedantnawghare" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                  </a>
+                  <button class="btn btn-secondary btn-sm preview-btn" data-target="mockup-agri">
+                    <span>Inspect Intelligence Panel</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Interactive Simulated Intelligence Command UI -->
+              <div class="project-mockup" id="mockup-agri">
+                <div class="mockup-chrome">
+                  <div class="chrome-dot red"></div>
+                  <div class="chrome-dot yellow"></div>
+                  <div class="chrome-dot green"></div>
+                  <span class="chrome-title">AgriChain AI · Market Intelligence Engine</span>
+                  <span class="lang-switch-badge">LANG: [EN | HI | MR]</span>
+                </div>
+                <div class="mockup-body mockup-agri-body">
+                  <div class="agri-top-row">
+                    <div class="agri-metric-tile">
+                      <span class="tile-lbl">WEATHER (NAGPUR)</span>
+                      <span class="tile-val">28°C · 65% Humidity</span>
+                      <span class="tile-sub text-lime">Harvest: FAVORABLE (48h Window)</span>
+                    </div>
+                    <div class="agri-metric-tile">
+                      <span class="tile-lbl">SPOILAGE RISK</span>
+                      <span class="tile-val text-lime">LOW (12.4%)</span>
+                      <span class="tile-sub">Transit tolerance: 4 Days</span>
+                    </div>
+                  </div>
+                  <div class="agri-chart-sim">
+                    <div class="chart-header">
+                      <span class="chart-title">Mandi Price Index (Nagpur APMC)</span>
+                      <span class="chart-legend text-lime">Wheat +4.2% · Soybean +6.8%</span>
+                    </div>
+                    <div class="chart-bars">
+                      <div class="cbar" style="height: 45%" data-val="₹2,450/q"></div>
+                      <div class="cbar" style="height: 60%" data-val="₹2,680/q"></div>
+                      <div class="cbar" style="height: 52%" data-val="₹2,590/q"></div>
+                      <div class="cbar" style="height: 75%" data-val="₹2,840/q"></div>
+                      <div class="cbar active-bar" style="height: 90%" data-val="₹3,120/q"></div>
+                    </div>
+                  </div>
+                  <div class="agri-recommendation-box">
+                    <div class="rec-icon">⚡</div>
+                    <div class="rec-details">
+                      <strong>AI Recommendation:</strong> Dispatch to Kalmeshwar Mandi (+₹280/q net over local APMC after logistics deduction). Confidence: <strong>92.4%</strong>.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT B: Deepfake Voice Detection & Scam Prevention -->
+          <article class="project-card tilt-card reveal-item" data-category="ai-ml" data-tilt>
+            <div class="project-card-grid">
+              
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="proj-badge badge-research">RESEARCH &amp; PATENT CONTRIBUTION</span>
+                  <span class="proj-category">AUDIO &amp; SPEECH INTELLIGENCE</span>
+                </div>
+                <h3 class="project-title">Deepfake Voice Detection &amp; Scam Prevention</h3>
+                <p class="project-desc">
+                  A hybrid acoustic-linguistic AI detection pipeline that analyzes voice samples through spectral feature extraction and semantic speech recognition to distinguish synthetic/cloned audio from authentic human speech.
+                </p>
+
+                <!-- Reported Model Figures -->
+                <div class="metrics-grid">
+                  <div class="metric-box">
+                    <span class="m-val text-lime">94.5%</span>
+                    <span class="m-lbl">Reported Accuracy</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="m-val text-cyan">0.963</span>
+                    <span class="m-lbl">Reported F1-Score</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="m-val text-lime">0.985</span>
+                    <span class="m-lbl">Reported AUC</span>
+                  </div>
+                </div>
+
+                <div class="project-highlight-box">
+                  <div class="ph-item">
+                    <span class="ph-label">Architecture</span>
+                    <span class="ph-val">MFCC-13, spectral roll-off, chroma, and Zero-Crossing Rate combined with Random Forest classification, Whisper / Google Speech transcription, keyword anomaly detection, and risk scoring.</span>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Scikit-learn</span>
+                  <span class="tag">Librosa</span>
+                  <span class="tag">OpenAI Whisper</span>
+                  <span class="tag">Random Forest</span>
+                  <span class="tag">Signal Processing</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/Vedantnawghare/Deepfake-Voice-Detection-System-PBL-" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Verified GitHub Repo</span>
+                  </a>
+                  <a href="#research" class="btn btn-outline btn-sm">
+                    <span>Patent No. 202521130742 A</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Voice Spectrogram Simulation -->
+              <div class="project-mockup">
+                <div class="mockup-chrome">
+                  <div class="chrome-dot red"></div>
+                  <div class="chrome-dot yellow"></div>
+                  <div class="chrome-dot green"></div>
+                  <span class="chrome-title">VoiceGuard AI · Acoustic Spectrogram Engine</span>
+                  <span class="status-pill text-red">DEEPFAKE DETECTED</span>
+                </div>
+                <div class="mockup-body mockup-audio-body">
+                  <!-- Audio Waveform Canvas Animation -->
+                  <div class="waveform-container">
+                    <canvas id="waveform-canvas" class="waveform-canvas"></canvas>
+                    <div class="waveform-overlay">
+                      <span class="badge-tag">Sample: synthetic_voice_cloned_04.wav</span>
+                      <span class="badge-tag font-mono">16kHz PCM · 4.8s</span>
+                    </div>
+                  </div>
+                  <!-- Feature Extraction Breakdown -->
+                  <div class="feature-meters">
+                    <div class="meter-col">
+                      <div class="meter-label">MFCC-13 Variance</div>
+                      <div class="meter-bar"><div class="meter-fill fill-red" style="width: 88%"></div></div>
+                    </div>
+                    <div class="meter-col">
+                      <div class="meter-label">Spectral Roll-Off (Hz)</div>
+                      <div class="meter-bar"><div class="meter-fill fill-amber" style="width: 72%"></div></div>
+                    </div>
+                    <div class="meter-col">
+                      <div class="meter-label">Whisper Keyword Anomaly</div>
+                      <div class="meter-bar"><div class="meter-fill fill-red" style="width: 95%"></div></div>
+                    </div>
+                  </div>
+                  <div class="diag-banner red-banner">
+                    <span class="diag-icon">⚠</span>
+                    <span>Synthesis artifact probability: <strong>94.5%</strong>. Voice clone signature identified in high-frequency spectral envelope.</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT C: Patient Vital Monitoring System -->
+          <article class="project-card tilt-card reveal-item" data-category="fullstack backend" data-tilt>
+            <div class="project-card-grid">
+              
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="proj-badge">HEALTHCARE ENGINEERING</span>
+                  <span class="proj-category">CRITICAL TELEMETRY PLATFORM</span>
+                </div>
+                <h3 class="project-title">Patient Vital Monitoring System</h3>
+                <p class="project-desc">
+                  A high-reliability clinical application for hospital patient monitoring featuring rapid nurse-side vital entry, role-based access control, and dedicated dashboards for doctors, administrators, and emergency triage.
+                </p>
+
+                <div class="project-highlight-box">
+                  <div class="ph-item">
+                    <span class="ph-label">Problem</span>
+                    <span class="ph-val">Lagging paper-based ward charts and slow doctor notification during acute patient vital deterioration.</span>
+                  </div>
+                  <div class="ph-item">
+                    <span class="ph-label">Core Implementation</span>
+                    <span class="ph-val">Developed the core application with real-time vital ingestion, diagnosis histories, structured clinical charts, and doctor-nurse permission boundaries.</span>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Web Application</span>
+                  <span class="tag">RBAC</span>
+                  <span class="tag">Clinical Telemetry</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/Vedantnawghare" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                  </a>
+                  <button class="btn btn-secondary btn-sm preview-btn" data-target="mockup-vital">
+                    <span>Illustrative Telemetry Preview</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Interactive Healthcare Telemetry Mockup -->
+              <div class="project-mockup" id="mockup-vital">
+                <div class="mockup-chrome">
+                  <div class="chrome-dot red"></div>
+                  <div class="chrome-dot yellow"></div>
+                  <div class="chrome-dot green"></div>
+                  <span class="chrome-title">VitalPulse · ICU Ward Clinical Monitor (Illustrative)</span>
+                  <span class="role-badge">DOCTOR VIEW</span>
+                </div>
+                <div class="mockup-body mockup-vital-body">
+                  <!-- Heartbeat ECG line canvas -->
+                  <div class="ecg-container">
+                    <canvas id="ecg-canvas" class="ecg-canvas"></canvas>
+                    <div class="ecg-tag">LEAD II ECG · NORMAL SINUS RHYTHM</div>
+                  </div>
+                  <!-- Vitals Row -->
+                  <div class="vital-cards-row">
+                    <div class="vcard">
+                      <span class="vname">HEART RATE</span>
+                      <span class="vnum text-lime">74 <small>BPM</small></span>
+                      <span class="vstatus">STABLE</span>
+                    </div>
+                    <div class="vcard">
+                      <span class="vname">SPO2</span>
+                      <span class="vnum text-cyan">98 <small>%</small></span>
+                      <span class="vstatus">NORMAL</span>
+                    </div>
+                    <div class="vcard">
+                      <span class="vname">BLOOD PRESSURE</span>
+                      <span class="vnum">120/80</span>
+                      <span class="vstatus">OPTIMAL</span>
+                    </div>
+                    <div class="vcard">
+                      <span class="vname">TEMPERATURE</span>
+                      <span class="vnum">37.0 <small>°C</small></span>
+                      <span class="vstatus">EUVOLEMIC</span>
+                    </div>
+                  </div>
+                  <div class="patient-snippet">
+                    <span class="pat-id font-mono">PT-2026-084</span>
+                    <span class="pat-diag">Post-Op Recovery · ICU Ward 3B · Attending Dr. Consultation Logged</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT D: Resolve AI / Intelligent Issue Engine -->
+          <article class="project-card tilt-card reveal-item" data-category="ai-ml backend" data-tilt>
+            <div class="project-card-grid">
+              
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="proj-badge">INCIDENT INTELLIGENCE</span>
+                  <span class="proj-category">NLP &amp; WORKFLOW AUTOMATION</span>
+                </div>
+                <h3 class="project-title">Resolve AI / Intelligent Issue Engine</h3>
+                <p class="project-desc">
+                  An explainable intelligence engine that transforms informal, noisy issue reports into structured, categorized, and prioritized incident tickets with transparent decision reasoning.
+                </p>
+
+                <div class="project-highlight-box">
+                  <div class="ph-item">
+                    <span class="ph-label">Language Flexibility</span>
+                    <span class="ph-val">Native handling of Hinglish, spelling mistakes, colloquial jargon, and informal technician logs.</span>
+                  </div>
+                  <div class="ph-item">
+                    <span class="ph-label">Decision Architecture</span>
+                    <span class="ph-val">Hybrid ML and rule-based priority scoring, recurring issue clustering, workload analytics, and automatic escalation for human-in-the-loop review.</span>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">NLP</span>
+                  <span class="tag">Scikit-learn</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Hinglish Parsing</span>
+                  <span class="tag">Incident Triage</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/Vedantnawghare/Resolve_AI-Intelligent-Issue-Engine" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Verified GitHub Repo</span>
+                  </a>
+                  <button class="btn btn-secondary btn-sm preview-btn" data-target="mockup-resolve">
+                    <span>Incident Command View</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Interactive Incident Command Center Mockup -->
+              <div class="project-mockup" id="mockup-resolve">
+                <div class="mockup-chrome">
+                  <div class="chrome-dot red"></div>
+                  <div class="chrome-dot yellow"></div>
+                  <div class="chrome-dot green"></div>
+                  <span class="chrome-title">Resolve AI · Incident Intelligence Command</span>
+                  <span class="status-pill text-lime">TRIAGE RUNNING</span>
+                </div>
+                <div class="mockup-body mockup-resolve-body">
+                  <div class="resolve-stream-box">
+                    <span class="rs-label">RAW INGEST STREAM (Hinglish):</span>
+                    <p class="rs-text font-mono">"Payment gateway timeout aa raha hai, clients checkout nahi kar pa rahe. 504 error bar bar repeat ho raha."</p>
+                  </div>
+                  <div class="resolve-output-grid">
+                    <div class="ro-card">
+                      <span class="ro-key">PREDICTED CATEGORY</span>
+                      <span class="ro-val text-lime">PAYMENT_GATEWAY_TIMEOUT</span>
+                    </div>
+                    <div class="ro-card">
+                      <span class="ro-key">PRIORITY LEVEL</span>
+                      <span class="ro-val text-red font-bold">P1 — CRITICAL</span>
+                    </div>
+                    <div class="ro-card">
+                      <span class="ro-key">CONFIDENCE</span>
+                      <span class="ro-val text-cyan">91.8% [Automated]</span>
+                    </div>
+                    <div class="ro-card">
+                      <span class="ro-key">DISPATCH ROUTE</span>
+                      <span class="ro-val">Infra-Oncall · DevOps</span>
+                    </div>
+                  </div>
+                  <div class="resolve-explanation font-mono">
+                    <strong>Reasoning trace:</strong> Detected tokens: [504, timeout, payment gateway]. High recurring cluster correlation (Incident #412). Human intervention: Bypassed (High confidence).
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT E: Life RPG -->
+          <article class="project-card tilt-card reveal-item" data-category="fullstack" data-tilt>
+            <div class="project-card-grid">
+              
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="proj-badge badge-hackathon">IIT BHUBANESWAR HACKATHON</span>
+                  <span class="proj-category">GAMIFIED PRODUCTIVITY SYSTEM</span>
+                </div>
+                <h3 class="project-title">Life RPG — Real Life Gamification System</h3>
+                <p class="project-desc">
+                  A gamified productivity engine that converts daily software development tasks, study routines, and health habits into playable RPG quests, boss encounters, experience points, and skill tree character progression.
+                </p>
+
+                <div class="project-highlight-box">
+                  <div class="ph-item">
+                    <span class="ph-label">Problem</span>
+                    <span class="ph-val">Task paralysis and low intrinsic motivation in long-term engineering learning sprints.</span>
+                  </div>
+                  <div class="ph-item">
+                    <span class="ph-label">Hackathon Build</span>
+                    <span class="ph-val">Interactive quest log, dynamic character stats (STR, INT, FOCUS), boss encounter calculations based on task velocity, and deployed web application.</span>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Next.js</span>
+                  <span class="tag">Gamification</span>
+                  <span class="tag">Web Hackathon</span>
+                  <span class="tag">State Management</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/Vedantnawghare/web-hackathon-life-rpg-iit-Bhubaneswar" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Verified GitHub Repo</span>
+                  </a>
+                  <a href="https://life-rpg-lake-ten.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>Live Demo App</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive RPG HUD Mockup -->
+              <div class="project-mockup">
+                <div class="mockup-chrome">
+                  <div class="chrome-dot red"></div>
+                  <div class="chrome-dot yellow"></div>
+                  <div class="chrome-dot green"></div>
+                  <span class="chrome-title">Life RPG · Character Stats &amp; Active Quests</span>
+                  <span class="role-badge text-lime">LEVEL 18 KNIGHT</span>
+                </div>
+                <div class="mockup-body mockup-rpg-body">
+                  <div class="rpg-stat-bars">
+                    <div class="rpg-bar-group">
+                      <div class="rpg-bar-label"><span>XP Progress</span> <span>4,820 / 5,000</span></div>
+                      <div class="rpg-bar"><div class="rpg-bar-fill fill-lime" style="width: 96%"></div></div>
+                    </div>
+                    <div class="rpg-bar-group">
+                      <div class="rpg-bar-label"><span>Focus Mana</span> <span>85 / 100</span></div>
+                      <div class="rpg-bar"><div class="rpg-bar-fill fill-cyan" style="width: 85%"></div></div>
+                    </div>
+                  </div>
+                  <div class="quest-log-box">
+                    <span class="ql-title font-mono">// ACTIVE QUEST LOG</span>
+                    <div class="quest-item done">
+                      <span class="q-check">✔</span>
+                      <span class="q-name">Complete UpToSkills Audio Buffer Producer-Consumer</span>
+                      <span class="q-xp">+350 XP</span>
+                    </div>
+                    <div class="quest-item active-q">
+                      <span class="q-check">⚡</span>
+                      <span class="q-name">Validate Output Consistency in FastAPI with Pytest</span>
+                      <span class="q-xp">+250 XP</span>
+                    </div>
+                    <div class="quest-item pending">
+                      <span class="q-check">○</span>
+                      <span class="q-name">Benchmark Redis Cache-Aside vs Write-Through</span>
+                      <span class="q-xp">+400 XP</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT F: Agricultural Crop Price Prediction -->
+          <article class="project-card tilt-card reveal-item" data-category="ai-ml" data-tilt>
+            <div class="project-card-grid">
+              
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="proj-badge badge-pub">PUBLISHED IEEE &amp; PATENT</span>
+                  <span class="proj-category">TIME-SERIES ENSEMBLE LEARNING</span>
+                </div>
+                <h3 class="project-title">Agricultural Crop Price Prediction</h3>
+                <p class="project-desc">
+                  An ensemble-learning machine learning system for forecasting crop market prices, leveraging stacking regression models trained on multi-decade climate records, historical mandi trading volumes, and economic indicators.
+                </p>
+
+                <div class="project-highlight-box">
+                  <div class="ph-item">
+                    <span class="ph-label">Research Link</span>
+                    <span class="ph-val">Serves as the engineering implementation behind IEEE TEMSMET 2025 publication and Indian Patent Application No. 202621048319 A.</span>
+                  </div>
+                  <div class="ph-item">
+                    <span class="ph-label">Core Innovation</span>
+                    <span class="ph-val">Two-tier stacking ensemble architecture combining Random Forest, XGBoost, and CatBoost with a regularized meta-regressor, outperforming standalone baselines.</span>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Stacking Ensemble</span>
+                  <span class="tag">Random Forest</span>
+                  <span class="tag">XGBoost</span>
+                  <span class="tag">Pandas</span>
+                  <span class="tag">Scikit-learn</span>
+                  <span class="tag">Regression Modeling</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="#research" class="btn btn-primary btn-sm">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    <span>Read IEEE Publication Details</span>
+                  </a>
+                  <a href="https://doi.org/10.1109/TEMSMET65536.2025.11467327" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <span>IEEE Xplore DOI</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Stacking Ensemble Architecture Card -->
+              <div class="project-mockup">
+                <div class="mockup-chrome">
+                  <div class="chrome-dot red"></div>
+                  <div class="chrome-dot yellow"></div>
+                  <div class="chrome-dot green"></div>
+                  <span class="chrome-title">StackingML · Multi-Model Regression Architecture</span>
+                </div>
+                <div class="mockup-body mockup-ensemble-body">
+                  <div class="ensemble-diagram">
+                    <div class="base-learners">
+                      <span class="ens-title">LEVEL 0: BASE LEARNERS</span>
+                      <div class="learner-chip">Random Forest Regressor</div>
+                      <div class="learner-chip">XGBoost Gradient Booster</div>
+                      <div class="learner-chip">CatBoost Regressor</div>
+                    </div>
+                    <div class="ens-arrow">➔ ➔ ➔</div>
+                    <div class="meta-learner">
+                      <span class="ens-title">LEVEL 1: META REGRESSOR</span>
+                      <div class="meta-chip text-lime">Ridge Meta-Estimator</div>
+                      <div class="ens-metric">Cross-Val R²: <strong>0.92</strong></div>
+                    </div>
+                  </div>
+                  <div class="diag-banner cyan-banner">
+                    <span class="diag-icon">📊</span>
+                    <span>Stacking generalization error reduced by 18.4% compared to standard Linear and Decision Tree baselines.</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. RESEARCH & PUBLICATIONS SECTION -->
+    <section id="research" class="section research-section" aria-labelledby="research-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">03</span>
+          <span class="badge-label">PUBLICATIONS &amp; PATENTS</span>
+        </div>
+
+        <h2 id="research-heading" class="section-title reveal-item">
+          Research that moves<br>
+          <span class="highlight-text">beyond the screen.</span>
+        </h2>
+        <p class="section-subtitle reveal-item">
+          Bridging mathematical rigor, empirical validation, and intellectual property in artificial intelligence and applied machine learning.
+        </p>
+
+        <!-- Publication Cards (Editorial Journal Style) -->
+        <div class="research-grid">
+          
+          <!-- IEEE Publication -->
+          <article class="research-card ieee-card tilt-card reveal-item" data-tilt>
+            <div class="research-card-header">
+              <div class="res-type-badge text-lime">IEEE RESEARCH PUBLICATION</div>
+              <div class="res-year font-mono">Published 2026</div>
+            </div>
+
+            <h3 class="res-title">
+              "An Agricultural Machine Learning Framework for Ensemble Regressor-Based Crop Price Prediction"
+            </h3>
+
+            <div class="res-meta-row">
+              <div class="rm-item">
+                <span class="rm-label">CONFERENCE</span>
+                <span class="rm-val">IEEE TEMSMET 2025</span>
+              </div>
+              <div class="rm-item">
+                <span class="rm-label">PUBLISHER</span>
+                <span class="rm-val">IEEE Xplore (2026)</span>
+              </div>
+              <div class="rm-item">
+                <span class="rm-label">DOI IDENTIFIER</span>
+                <span class="rm-val font-mono">10.1109/TEMSMET65536.2025.11467327</span>
+              </div>
+            </div>
+
+            <p class="res-abstract">
+              <strong>Abstract Summary:</strong> Presents a data-driven framework utilizing stacking ensemble regressors to forecast crop price trajectories across regional agricultural markets. Evaluates multi-source feature integration incorporating temperature, rainfall precipitation, historical mandi arrival volumes, and transportation cost indices. Demonstrates superior R² accuracy and lowered Mean Absolute Percentage Error (MAPE) over standard standalone regressors.
+            </p>
+
+            <div class="res-actions">
+              <a href="https://doi.org/10.1109/TEMSMET65536.2025.11467327" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>View on IEEE Xplore</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <span class="peer-reviewed-tag">✔ Peer Reviewed</span>
+            </div>
+          </article>
+
+          <!-- Patent Application 1 -->
+          <article class="research-card patent-card tilt-card reveal-item" data-tilt>
+            <div class="research-card-header">
+              <div class="res-type-badge text-cyan">PUBLISHED PATENT APPLICATION</div>
+              <div class="res-year font-mono">Published Jan 2026</div>
+            </div>
+
+            <h3 class="res-title">
+              "System and Method for Detecting Artificial Intelligence Generated Voice Using Hybrid Acoustic and Linguistic Analysis"
+            </h3>
+
+            <div class="res-meta-row">
+              <div class="rm-item">
+                <span class="rm-label">APPLICATION NO.</span>
+                <span class="rm-val font-mono text-cyan">202521130742 A</span>
+              </div>
+              <div class="rm-item">
+                <span class="rm-label">JURISDICTION</span>
+                <span class="rm-val">Indian Patent Office</span>
+              </div>
+              <div class="rm-item">
+                <span class="rm-label">CONTRIBUTION</span>
+                <span class="rm-val">Contributed to Implementation</span>
+              </div>
+            </div>
+
+            <p class="res-abstract">
+              <strong>Technical Disclosure:</strong> A hybrid detection architecture that couples physical-layer acoustic feature analysis (MFCC coefficients, spectral flux, frequency modulation boundaries) with natural language transcript modeling to identify speech synthesized by deep learning neural vocoders and voice-cloning engines.
+            </p>
+
+            <div class="patent-status-bar">
+              <span class="status-indicator"></span>
+              <span class="status-note">Officially published patent application in the Indian Patent Office Journal.</span>
+            </div>
+          </article>
+
+          <!-- Patent Application 2 -->
+          <article class="research-card patent-card tilt-card reveal-item" data-tilt>
+            <div class="research-card-header">
+              <div class="res-type-badge text-cyan">PUBLISHED PATENT APPLICATION</div>
+              <div class="res-year font-mono">Published Jun 2026</div>
+            </div>
+
+            <h3 class="res-title">
+              "A Stacking Ensemble Machine Learning System and Method for Agricultural Crop Price Prediction"
+            </h3>
+
+            <div class="res-meta-row">
+              <div class="rm-item">
+                <span class="rm-label">APPLICATION NO.</span>
+                <span class="rm-val font-mono text-cyan">202621048319 A</span>
+              </div>
+              <div class="rm-item">
+                <span class="rm-label">JURISDICTION</span>
+                <span class="rm-val">Indian Patent Office</span>
+              </div>
+              <div class="rm-item">
+                <span class="rm-label">CONTRIBUTION</span>
+                <span class="rm-val">Contributed to Implementation</span>
+              </div>
+            </div>
+
+            <p class="res-abstract">
+              <strong>Technical Disclosure:</strong> An automated multi-tier stacking regressor system configured to predict agricultural commodity pricing under volatile climate conditions. Combines heterogeneous base model pipelines with regularized meta-regressors to prevent overfitting on local market shocks.
+            </p>
+
+            <div class="patent-status-bar">
+              <span class="status-indicator"></span>
+              <span class="status-note">Officially published patent application in the Indian Patent Office Journal.</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. EXPERIENCE & LEADERSHIP SECTION -->
+    <section id="experience" class="section exp-section" aria-labelledby="exp-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">04</span>
+          <span class="badge-label">PROFESSIONAL EXPERIENCE</span>
+        </div>
+
+        <h2 id="exp-heading" class="section-title reveal-item">
+          From building systems<br>
+          <span class="highlight-text">to leading engineers.</span>
+        </h2>
+
+        <!-- Vertical Timeline with Illuminated Nodes -->
+        <div class="experience-timeline">
+          
+          <div class="timeline-line"></div>
+
+          <!-- Experience Card: UpToSkills -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-marker">
+              <div class="marker-glow"></div>
+              <div class="marker-dot"></div>
+            </div>
+
+            <div class="timeline-content tilt-card" data-tilt>
+              <div class="exp-header">
+                <div>
+                  <div class="exp-org-row">
+                    <h3 class="exp-org">UpToSkills</h3>
+                    <span class="exp-badge">REMOTE INTERNSHIP &amp; CAPTAINCY</span>
+                  </div>
+                  <div class="exp-role-progression">
+                    <span class="role-step">AI/ML Intern</span>
+                    <span class="role-arrow">➔</span>
+                    <span class="role-step highlight-step">Captain, Artificial Intelligence &amp; Machine Learning</span>
+                  </div>
+                </div>
+                <div class="exp-dates font-mono">
+                  <span>Apr. 2026 – Jul. 2026</span>
+                  <span class="promo-date text-lime">Promoted to Captain: June 29, 2026</span>
+                </div>
+              </div>
+
+              <!-- Engineering Achievements Accordion / Detail Grid -->
+              <div class="exp-achievements">
+                
+                <div class="achieve-item">
+                  <div class="ach-num">01</div>
+                  <div class="ach-body">
+                    <strong>Leadership &amp; Team Coordination:</strong> Promoted to <strong>Captain</strong> on June 29, 2026. Successfully coordinated <strong>15+ interns</strong> through systematic task allocation, progress tracking, technical guidance, code review, GitHub pull-request review, and integration into main repositories.
+                  </div>
+                </div>
+
+                <div class="achieve-item">
+                  <div class="ach-num">02</div>
+                  <div class="ach-body">
+                    <strong>Real-Time Audio Buffer Manager:</strong> Implemented a multi-threaded producer-consumer audio buffer using <strong>Python, FastAPI, WebSockets, NumPy</strong>, bounded queues, thread synchronization primitives, and overflow handling with telemetry monitoring endpoints.
+                  </div>
+                </div>
+
+                <div class="achieve-item">
+                  <div class="ach-num">03</div>
+                  <div class="ach-body">
+                    <strong>Schema-Based AI Output Validator:</strong> Built an automated AI output consistency validator using <strong>FastAPI</strong> and <strong>JSON Schema</strong>, complete with automated test suites, consistency scoring metrics, validation history persistence, and an interactive <strong>Streamlit</strong> analytical dashboard.
+                  </div>
+                </div>
+
+                <div class="achieve-item">
+                  <div class="ach-num">04</div>
+                  <div class="ach-body">
+                    <strong>Transcript Preprocessing &amp; Caching Benchmarks:</strong> Implemented an NLP transcript preprocessing pipeline with text normalization. Rigorously evaluated <strong>Cache-Aside</strong> and <strong>Write-Through</strong> caching strategies using <strong>Redis</strong> and <strong>SQLite</strong>, conducting latency benchmarking under high load.
+                  </div>
+                </div>
+
+                <div class="achieve-item">
+                  <div class="ach-num">05</div>
+                  <div class="ach-body">
+                    <strong>Testing &amp; Containerization:</strong> Standardized development workflows using <strong>Docker</strong> for reproducible containerized runtime environments and authored comprehensive test suites using <strong>Pytest</strong>.
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Tech Pills -->
+              <div class="exp-tech-row">
+                <span class="tag">FastAPI</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Redis</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">JSON Schema</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Pytest</span>
+                <span class="tag">GitHub PR Review</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. EDUCATION SECTION -->
+    <section id="education" class="section edu-section" aria-labelledby="edu-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">05</span>
+          <span class="badge-label">ACADEMIC FOUNDATION</span>
+        </div>
+
+        <h2 id="edu-heading" class="section-title reveal-item">
+          The foundation behind<br>
+          <span class="highlight-text">the engineering.</span>
+        </h2>
+
+        <!-- Education Editorial Card -->
+        <div class="edu-card tilt-card reveal-item" data-tilt>
+          <div class="edu-card-grid">
+            
+            <div class="edu-main-info">
+              <span class="edu-degree-badge">UNDERGRADUATE DEGREE</span>
+              <h3 class="edu-institution">Symbiosis Institute of Technology, Nagpur</h3>
+              <h4 class="edu-degree">Bachelor of Technology in Computer Science and Engineering — Data Science</h4>
+              <p class="edu-timeline font-mono">Academic Session: 2024 – 2028 · Nagpur, Maharashtra</p>
+
+              <p class="edu-summary">
+                Rigorous four-year curriculum concentrated on probability theory, statistical machine learning, algorithms and data structures, distributed systems, compiler design, and scalable database architectures.
+              </p>
+
+              <div class="edu-coursework">
+                <span class="cw-title font-mono">// CORE SUBJECTS &amp; LABS</span>
+                <div class="cw-tags">
+                  <span>Data Structures &amp; Algorithms</span>
+                  <span>Machine Learning</span>
+                  <span>Natural Language Processing</span>
+                  <span>Database Management Systems</span>
+                  <span>Operating Systems</span>
+                  <span>Compiler Construction</span>
+                  <span>Discrete Mathematics</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visual CGPA Gauge / Metric Box -->
+            <div class="edu-cgpa-box">
+              <div class="cgpa-ring-wrapper">
+                <svg class="cgpa-svg" viewBox="0 0 120 120">
+                  <circle class="cgpa-bg-circle" cx="60" cy="60" r="50"></circle>
+                  <circle class="cgpa-progress-circle" cx="60" cy="60" r="50" style="stroke-dashoffset: 58.9;"></circle>
+                </svg>
+                <div class="cgpa-display">
+                  <span class="cgpa-num">8.125</span>
+                  <span class="cgpa-scale">/ 10.0</span>
+                </div>
+              </div>
+              <span class="cgpa-label">CUMULATIVE GRADE POINT AVERAGE</span>
+              <p class="cgpa-footnote">Exact verified academic CGPA at Symbiosis Institute of Technology, Nagpur.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <div class="section-badge reveal-item">
+              <span class="badge-index">06</span>
+              <span class="badge-label">TECHNICAL CAPABILITIES</span>
+            </div>
+            <h2 id="skills-heading" class="section-title reveal-item">
+              Tools are instruments.<br>
+              <span class="highlight-text">Engineering is the craft.</span>
+            </h2>
+          </div>
+          
+          <!-- Real-time Skill Filter Search -->
+          <div class="skill-search-wrapper reveal-item">
+            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="skill-search" class="skill-search-input" placeholder="Search technologies (e.g. FastAPI, Python, Redis)..." aria-label="Filter skills">
+          </div>
+        </div>
+
+        <!-- Categorized Interactive Skill Clusters -->
+        <div class="skills-grid" id="skills-grid">
+          
+          <!-- Cluster 1: Programming Languages -->
+          <div class="skill-cluster-card tilt-card reveal-item" data-tilt>
+            <div class="cluster-header">
+              <span class="cluster-icon">⌨</span>
+              <h3 class="cluster-title">Programming Languages</h3>
+            </div>
+            <div class="cluster-tags">
+              <span class="skill-tag" data-name="python">Python</span>
+              <span class="skill-tag" data-name="sql">SQL</span>
+              <span class="skill-tag" data-name="c">C</span>
+              <span class="skill-tag" data-name="c++">C++</span>
+              <span class="skill-tag" data-name="java">Java</span>
+              <span class="skill-tag" data-name="javascript">JavaScript</span>
+              <span class="skill-tag" data-name="typescript">TypeScript</span>
+            </div>
+          </div>
+
+          <!-- Cluster 2: AI, ML & Data Science -->
+          <div class="skill-cluster-card tilt-card reveal-item" data-tilt>
+            <div class="cluster-header">
+              <span class="cluster-icon">🧠</span>
+              <h3 class="cluster-title">AI, Machine Learning &amp; Data Science</h3>
+            </div>
+            <div class="cluster-tags">
+              <span class="skill-tag text-lime" data-name="machine learning">Machine Learning</span>
+              <span class="skill-tag text-lime" data-name="deep learning">Deep Learning</span>
+              <span class="skill-tag text-lime" data-name="nlp">Natural Language Processing</span>
+              <span class="skill-tag text-lime" data-name="ensemble models">Ensemble Models</span>
+              <span class="skill-tag" data-name="transformers">Transformers</span>
+              <span class="skill-tag" data-name="generative ai llms">Generative AI &amp; LLMs</span>
+              <span class="skill-tag" data-name="scikit-learn">Scikit-learn</span>
+              <span class="skill-tag" data-name="numpy">NumPy</span>
+              <span class="skill-tag" data-name="pandas">Pandas</span>
+              <span class="skill-tag" data-name="matplotlib">Matplotlib</span>
+              <span class="skill-tag" data-name="librosa">Librosa</span>
+            </div>
+          </div>
+
+          <!-- Cluster 3: Backend & Infrastructure -->
+          <div class="skill-cluster-card tilt-card reveal-item" data-tilt>
+            <div class="cluster-header">
+              <span class="cluster-icon">⚡</span>
+              <h3 class="cluster-title">Backend &amp; Infrastructure</h3>
+            </div>
+            <div class="cluster-tags">
+              <span class="skill-tag text-cyan" data-name="fastapi">FastAPI</span>
+              <span class="skill-tag text-cyan" data-name="rest apis">REST APIs</span>
+              <span class="skill-tag text-cyan" data-name="websockets">WebSockets</span>
+              <span class="skill-tag text-cyan" data-name="redis">Redis Caching</span>
+              <span class="skill-tag" data-name="sqlite">SQLite</span>
+              <span class="skill-tag text-cyan" data-name="docker">Docker</span>
+              <span class="skill-tag" data-name="distributed systems">Distributed Systems</span>
+              <span class="skill-tag" data-name="caching">Caching Patterns</span>
+              <span class="skill-tag" data-name="pytest">Pytest</span>
+              <span class="skill-tag" data-name="git github">Git &amp; GitHub</span>
+              <span class="skill-tag" data-name="streamlit">Streamlit</span>
+            </div>
+          </div>
+
+          <!-- Cluster 4: Web Development -->
+          <div class="skill-cluster-card tilt-card reveal-item" data-tilt>
+            <div class="cluster-header">
+              <span class="cluster-icon">🌐</span>
+              <h3 class="cluster-title">Web Development</h3>
+            </div>
+            <div class="cluster-tags">
+              <span class="skill-tag" data-name="html">HTML5</span>
+              <span class="skill-tag" data-name="css">CSS3 (3D &amp; Motion)</span>
+              <span class="skill-tag" data-name="javascript">Vanilla JavaScript (ES6+)</span>
+              <span class="skill-tag" data-name="next.js">Next.js</span>
+              <span class="skill-tag" data-name="tailwind css">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Cluster 5: Research Transformer Models -->
+          <div class="skill-cluster-card tilt-card reveal-item" data-tilt>
+            <div class="cluster-header">
+              <span class="cluster-icon">🔬</span>
+              <h3 class="cluster-title">Research Architectures &amp; Models</h3>
+            </div>
+            <div class="cluster-tags">
+              <span class="skill-tag" data-name="bert">BERT</span>
+              <span class="skill-tag" data-name="distilbert">DistilBERT</span>
+              <span class="skill-tag" data-name="sentence-bert">Sentence-BERT</span>
+              <span class="skill-tag" data-name="bigbird">BigBird</span>
+              <span class="skill-tag" data-name="longformer">Longformer</span>
+              <span class="skill-tag" data-name="emoberta">EmoBERTa</span>
+              <span class="skill-tag" data-name="mentalbert">MentalBERT</span>
+              <span class="skill-tag" data-name="whisper">OpenAI Whisper</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. ACHIEVEMENTS & HACKATHONS SECTION -->
+    <section id="achievements" class="section ach-section" aria-labelledby="ach-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">07</span>
+          <span class="badge-label">COMPETITIVE MILESTONES</span>
+        </div>
+
+        <h2 id="ach-heading" class="section-title reveal-item">
+          Milestones,<br>
+          <span class="highlight-text">not just participation.</span>
+        </h2>
+
+        <!-- Milestone Wall Grid -->
+        <div class="milestones-grid">
+          
+          <!-- Adobe University Hackathon -->
+          <div class="milestone-card tilt-card reveal-item" data-tilt>
+            <div class="ms-year font-mono text-lime">2026</div>
+            <h3 class="ms-title">Adobe University Hackathon</h3>
+            <p class="ms-detail">
+              Cleared the rigorous Round 1 online technical assessment and successfully <strong>advanced to Round 2</strong> in national competition.
+            </p>
+            <span class="ms-tag text-lime">ADVANCED TO ROUND 2</span>
+          </div>
+
+          <!-- EncipherX 4.0 CTF -->
+          <div class="milestone-card tilt-card reveal-item" data-tilt>
+            <div class="ms-year font-mono text-cyan">2026</div>
+            <h3 class="ms-title">EncipherX 4.0 CTF</h3>
+            <div class="ms-org">SVPCET, Nagpur</div>
+            <p class="ms-detail">
+              Demonstrated security, cryptography, and reverse-engineering competencies, <strong>advancing to the final round</strong>.
+            </p>
+            <span class="ms-tag text-cyan">FINAL ROUND QUALIFIER</span>
+          </div>
+
+          <!-- Cypher Chronicles IIIT Nagpur -->
+          <div class="milestone-card tilt-card reveal-item" data-tilt>
+            <div class="ms-year font-mono text-lime">2024</div>
+            <h3 class="ms-title">Cypher Chronicles Hackathon</h3>
+            <div class="ms-org">IIIT Nagpur</div>
+            <p class="ms-detail">
+              Advanced to the <strong>final round</strong> of competitive problem solving and systems prototyping at Indian Institute of Information Technology, Nagpur.
+            </p>
+            <span class="ms-tag text-lime">FINAL ROUND QUALIFIER</span>
+          </div>
+
+          <!-- Multi-Institution Hackathons -->
+          <div class="milestone-card tilt-card reveal-item" data-tilt>
+            <div class="ms-year font-mono">2024 – 2026</div>
+            <h3 class="ms-title">National Technical Competitions</h3>
+            <div class="ms-org">IITs, BITS, IIIT Nagpur &amp; SIT Nagpur</div>
+            <p class="ms-detail">
+              Participated across multiple premier hackathons and algorithmic competitions, reaching offline evaluation stages in selected events.
+            </p>
+            <span class="ms-tag">OFFLINE STAGES REACHED</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. CERTIFICATES SECTION -->
+    <section id="certificates" class="section cert-section" aria-labelledby="cert-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">08</span>
+          <span class="badge-label">CREDENTIALS &amp; VERIFICATION</span>
+        </div>
+
+        <h2 id="cert-heading" class="section-title reveal-item">
+          Learning,<br>
+          <span class="highlight-text">documented.</span>
+        </h2>
+
+        <!-- Certificate Cards Grid -->
+        <div class="cert-grid">
+          
+          <!-- Primary Verified Certificate: Infosys Springboard -->
+          <div class="cert-card tilt-card reveal-item" data-tilt>
+            <div class="cert-badge text-lime">PRIMARY VERIFIED CERTIFICATION</div>
+            <h3 class="cert-title">Data Structures and Algorithms using Python – Part 1</h3>
+            <div class="cert-provider">Provider: <strong>Infosys Springboard</strong></div>
+            <div class="cert-year font-mono">Year: 2025 · Verified PDF Asset Available</div>
+            <p class="cert-desc">
+              Comprehensive evaluation of algorithmic complexity, sorting, searching, linked lists, stacks, queues, and tree structures implemented in Python.
+            </p>
+            <div class="cert-actions">
+              <a href="assets/certificates/infosys_springboard_dsa_python.pdf" target="_blank" class="btn btn-primary btn-sm" download="Infosys_Springboard_Certificate.pdf">
+                <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download PDF Asset</span>
+              </a>
+              <button class="btn btn-outline btn-sm cert-modal-btn" data-type="pdf" data-src="assets/certificates/infosys_springboard_dsa_python.pdf" data-title="Infosys Springboard - DSA in Python">
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Secondary Verified Certificate: IEEE NIT Delhi -->
+          <div class="cert-card tilt-card reveal-item" data-tilt>
+            <div class="cert-badge text-cyan">RESEARCH PARTICIPATION</div>
+            <h3 class="cert-title">IEEE Conference Presentation</h3>
+            <div class="cert-provider">Provider: <strong>IEEE / NIT Delhi</strong></div>
+            <div class="cert-year font-mono">Verified Credential Document</div>
+            <p class="cert-desc">
+              Academic paper presentation and conference research validation in machine learning and data engineering.
+            </p>
+            <div class="cert-actions">
+              <button class="btn btn-outline btn-sm cert-modal-btn" data-type="image" data-src="assets/certificates/ieee_nit_delhi.jpeg" data-title="IEEE NIT Delhi Certificate">
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Secondary Verified Certificate: Hackathon IIIT Nagpur -->
+          <div class="cert-card tilt-card reveal-item" data-tilt>
+            <div class="cert-badge">COMPETITION FINALIST</div>
+            <h3 class="cert-title">Hackathon Finalist Credential</h3>
+            <div class="cert-provider">Provider: <strong>IIIT Nagpur</strong></div>
+            <div class="cert-year font-mono">Verified Competition Record</div>
+            <p class="cert-desc">
+              Official finalist certificate for technical hackathon prototyping and systems engineering at IIIT Nagpur.
+            </p>
+            <div class="cert-actions">
+              <button class="btn btn-outline btn-sm cert-modal-btn" data-type="image" data-src="assets/certificates/hackathon_iiitn.jpeg" data-title="IIIT Nagpur Hackathon Certificate">
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. CONTRIBUTIONS & COLLABORATION SECTION -->
+    <section id="contributions" class="section contrib-section" aria-labelledby="contrib-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">09</span>
+          <span class="badge-label">ENGINEERING LEADERSHIP</span>
+        </div>
+
+        <h2 id="contrib-heading" class="section-title reveal-item">
+          Technical leadership<br>
+          <span class="highlight-text">&amp; collaborative engineering.</span>
+        </h2>
+
+        <!-- Split Grid -->
+        <div class="contrib-grid">
+          
+          <div class="contrib-card tilt-card reveal-item" data-tilt>
+            <div class="contrib-header">
+              <span class="contrib-number text-lime font-mono">01</span>
+              <h3 class="contrib-title">Captaincy &amp; Mentorship</h3>
+            </div>
+            <p class="contrib-text">
+              Promoted to <strong>Captain of Artificial Intelligence &amp; Machine Learning</strong> at UpToSkills. Directly led and synchronized work for 15+ interns, conducting PR reviews, debugging distributed audio buffers, and maintaining production standards.
+            </p>
+            <div class="contrib-stats">
+              <div class="cs-item"><span class="cs-num text-lime">15+</span><span class="cs-lbl">Engineers Coordinated</span></div>
+              <div class="cs-item"><span class="cs-num text-cyan">4</span><span class="cs-lbl">Core AI/ML Modules</span></div>
+            </div>
+          </div>
+
+          <div class="contrib-card tilt-card reveal-item" data-tilt>
+            <div class="contrib-header">
+              <span class="contrib-number text-cyan font-mono">02</span>
+              <h3 class="contrib-title">Research Implementation</h3>
+            </div>
+            <p class="contrib-text">
+              Co-authored and engineered implementations for <strong>1 IEEE Xplore publication</strong> and <strong>2 Indian Patent applications</strong>, handling pipeline validation, acoustic signal processing, and ensemble regressor convergence.
+            </p>
+            <div class="contrib-stats">
+              <div class="cs-item"><span class="cs-num text-cyan">1</span><span class="cs-lbl">IEEE Xplore Paper</span></div>
+              <div class="cs-item"><span class="cs-num text-lime">2</span><span class="cs-lbl">Patent Applications</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 12. VISUAL ARTIFACTS GALLERY -->
+    <section id="gallery" class="section gallery-section" aria-labelledby="gallery-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">10</span>
+          <span class="badge-label">VISUAL ARTIFACTS</span>
+        </div>
+
+        <h2 id="gallery-heading" class="section-title reveal-item">
+          Visual captures<br>
+          <span class="highlight-text">&amp; project architectures.</span>
+        </h2>
+
+        <!-- Staggered Visual Gallery Grid -->
+        <div class="gallery-grid">
+          
+          <!-- Tile 1: Profile & Workspace -->
+          <div class="gallery-tile reveal-item" data-lightbox="assets/images/vedant_profile.jpg" data-caption="Vedant Nawghare — Profile &amp; Developer Workspace">
+            <img src="assets/images/vedant_profile.jpg" alt="Vedant Nawghare developer portrait" class="tile-img" loading="lazy">
+            <div class="tile-overlay">
+              <span class="tile-caption">Vedant Dinesh Nawghare</span>
+              <span class="tile-sub">Nagpur, India</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Hackathon IIITN -->
+          <div class="gallery-tile reveal-item" data-lightbox="assets/certificates/hackathon_iiitn.jpeg" data-caption="Cypher Chronicles Finalist Credential — IIIT Nagpur">
+            <img src="assets/certificates/hackathon_iiitn.jpeg" alt="Cypher Chronicles Finalist Certificate IIIT Nagpur" class="tile-img" loading="lazy">
+            <div class="tile-overlay">
+              <span class="tile-caption">Hackathon Finalist</span>
+              <span class="tile-sub">IIIT Nagpur</span>
+            </div>
+          </div>
+
+          <!-- Tile 3: IEEE NIT Delhi -->
+          <div class="gallery-tile reveal-item" data-lightbox="assets/certificates/ieee_nit_delhi.jpeg" data-caption="IEEE Research Certificate — NIT Delhi">
+            <img src="assets/certificates/ieee_nit_delhi.jpeg" alt="IEEE Conference Research Participation" class="tile-img" loading="lazy">
+            <div class="tile-overlay">
+              <span class="tile-caption">IEEE Conference Credential</span>
+              <span class="tile-sub">NIT Delhi</span>
+            </div>
+          </div>
+
+          <!-- Tile 4: HCL GUVI -->
+          <div class="gallery-tile reveal-item" data-lightbox="assets/certificates/guvi_certification.png" data-caption="HCL GUVI Certification Document">
+            <img src="assets/certificates/guvi_certification.png" alt="HCL GUVI Certification Record" class="tile-img" loading="lazy">
+            <div class="tile-overlay">
+              <span class="tile-caption">HCL GUVI Certification</span>
+              <span class="tile-sub">Verified Credential</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 13. CONTACT SECTION -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        
+        <div class="section-badge reveal-item">
+          <span class="badge-index">11</span>
+          <span class="badge-label">INITIATE DIALOGUE</span>
+        </div>
+
+        <h2 id="contact-heading" class="section-title reveal-item">
+          Have an interesting problem?<br>
+          <span class="highlight-text">Let's build something meaningful.</span>
+        </h2>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Detail Cards -->
+          <div class="contact-card tilt-card reveal-item" data-tilt>
+            <h3 class="contact-card-title">Direct Inquiries</h3>
+            <p class="contact-intro">
+              Whether you're exploring machine learning collaborations, backend roles, research projects, or hackathons — my inbox is open.
+            </p>
+
+            <ul class="contact-list">
+              <li class="contact-item">
+                <span class="c-label">EMAIL ADDRESS</span>
+                <div class="c-val-row">
+                  <a href="mailto:vedant.nawghare35@gmail.com" class="c-link font-mono">vedant.nawghare35@gmail.com</a>
+                  <button id="copy-email-btn" class="btn btn-xs btn-outline copy-btn" title="Copy to clipboard">
+                    <span id="copy-text">Copy</span>
+                  </button>
+                </div>
+              </li>
+              <li class="contact-item">
+                <span class="c-label">TELEPHONE</span>
+                <a href="tel:+917709199466" class="c-link font-mono">+91 7709199466</a>
+              </li>
+              <li class="contact-item">
+                <span class="c-label">BASE LOCATION</span>
+                <span class="c-val">Nagpur, Maharashtra, India (IST)</span>
+              </li>
+              <li class="contact-item">
+                <span class="c-label">PRIMARY PROFILES</span>
+                <div class="c-links-cluster">
+                  <a href="https://github.com/Vedantnawghare" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub: Vedantnawghare</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/vedant-nawghare-512966320/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>LinkedIn: vedant-nawghare</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Functional Client-Side Direct Mail Dispatch Form -->
+          <div class="contact-card tilt-card reveal-item" data-tilt>
+            <h3 class="contact-card-title">Direct Dispatch</h3>
+            <p class="contact-intro">
+              Send a note directly. On submit, this safely prepares an authentic email in your mail client with verified routing.
+            </p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label">YOUR NAME / ORGANIZATION</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Dr. Jane Smith / Acme Corp" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">YOUR EMAIL ADDRESS</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. janesmith@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">SUBJECT</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="AI/ML Collaboration / Opportunity" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">MESSAGE</label>
+                <textarea id="form-message" class="form-textarea" rows="4" placeholder="Describe the problem, opportunity, or research collaboration..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full">
+                <span>PREPARE EMAIL DISPATCH</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+
+              <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">VEDANT NAWGHARE</span>
+        <p class="footer-tagline">Engineered with pure HTML5, CSS3, &amp; Vanilla JavaScript · Zero External Libraries</p>
+      </div>
+
+      <div class="footer-center">
+        <span class="footer-copy">&copy; <span id="current-year">2026</span> Vedant Dinesh Nawghare. All rights reserved.</span>
+        <span class="footer-sub">Symbiosis Institute of Technology, Nagpur · CGPA: 8.125</span>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to top of page">
+          <span>BACK TO TOP</span>
+          <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX / CERTIFICATE MODAL DIALOG -->
+  <div id="media-modal" class="media-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">Certificate Inspection</h3>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Injected dynamically: image or PDF embed -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+  <div id="toast" class="toast-popup" role="status" aria-live="polite"></div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
