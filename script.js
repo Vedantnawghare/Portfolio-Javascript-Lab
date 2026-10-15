@@ -1,7 +1,7 @@
 /**
  * VEDANT NAWGHARE — PREMIUM 3D DEVELOPER PORTFOLIO
  * Vanilla JavaScript (ES6+) — Zero External Dependencies
- * Modules: 3D Tilt, Spatial Canvas, Waveform, ECG, Terminal, Filtering, Modal
+ * Modules: Portrait Auto-Detect, 3D Tilt, Spatial Canvas, Waveform, ECG, Terminal, Filtering, Lightbox
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,7 +11,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* --------------------------------------------------------------------------
-     1. DYNAMIC IST CLOCK & RUNTIME
+     1. PROFESSIONAL PORTRAIT AUTO-DETECTION & PLACEHOLDER HANDLING
+     -------------------------------------------------------------------------- */
+  const profileImg = document.getElementById('hero-profile-img');
+  const portraitPlaceholder = document.getElementById('portrait-placeholder');
+
+  if (profileImg && portraitPlaceholder) {
+    // If image loads successfully, reveal image and hide placeholder
+    profileImg.addEventListener('load', () => {
+      profileImg.style.display = 'block';
+      portraitPlaceholder.style.display = 'none';
+    });
+
+    // If image is missing or fails to load, gracefully hide image and show placeholder
+    profileImg.addEventListener('error', () => {
+      profileImg.style.display = 'none';
+      portraitPlaceholder.style.display = 'flex';
+    });
+
+    // Trigger check for already cached or complete images
+    if (profileImg.complete) {
+      if (profileImg.naturalWidth > 0) {
+        profileImg.style.display = 'block';
+        portraitPlaceholder.style.display = 'none';
+      } else {
+        profileImg.style.display = 'none';
+        portraitPlaceholder.style.display = 'flex';
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     2. DYNAMIC IST CLOCK & RUNTIME
      -------------------------------------------------------------------------- */
   function updateISTClock() {
     const navClock = document.getElementById('ist-time-nav');
@@ -39,14 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateISTClock, 1000);
 
   /* --------------------------------------------------------------------------
-     2. STICKY HEADER & ACTIVE SECTION HIGHLIGHT
+     3. STICKY HEADER & ACTIVE SECTION HIGHLIGHT
      -------------------------------------------------------------------------- */
   const header = document.getElementById('site-header');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 35) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
@@ -73,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   /* --------------------------------------------------------------------------
-     3. MOBILE NAVIGATION DRAWER
+     4. MOBILE NAVIGATION DRAWER
      -------------------------------------------------------------------------- */
   const mobileToggle = document.getElementById('mobile-menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -99,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     4. CUSTOM CURSOR & GLOW FOLLOWER (DESKTOP)
+     5. CUSTOM CURSOR & GLOW FOLLOWER (DESKTOP)
      -------------------------------------------------------------------------- */
   const cursorGlow = document.getElementById('cursor-glow');
   const cursorDot = document.getElementById('cursor-dot');
@@ -127,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     5. AMBIENT SPATIAL CANVAS (HTML5 CANVAS 2D)
+     6. AMBIENT SPATIAL CANVAS (LIGHT THEME PARTICLES)
      -------------------------------------------------------------------------- */
   const ambientCanvas = document.getElementById('ambient-canvas');
   if (ambientCanvas && !prefersReducedMotion) {
@@ -141,23 +172,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     const particles = [];
-    const count = Math.min(Math.floor(window.innerWidth / 24), 50);
+    const count = Math.min(Math.floor(window.innerWidth / 30), 40);
 
     for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
         radius: Math.random() * 1.5 + 0.8,
-        color: Math.random() > 0.4 ? 'rgba(187, 244, 74, 0.4)' : 'rgba(34, 211, 238, 0.4)'
+        color: Math.random() > 0.4 ? 'rgba(101, 163, 13, 0.28)' : 'rgba(2, 132, 199, 0.25)'
       });
     }
 
-    let animId;
     function animateParticles() {
       if (document.hidden) {
-        animId = requestAnimationFrame(animateParticles);
+        requestAnimationFrame(animateParticles);
         return;
       }
 
@@ -185,24 +215,24 @@ document.addEventListener('DOMContentLoaded', () => {
           const dy = p1.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 120) {
+          if (dist < 110) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(187, 244, 74, ${0.12 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(101, 163, 13, ${0.1 * (1 - dist / 110)})`;
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }
         }
       }
 
-      animId = requestAnimationFrame(animateParticles);
+      requestAnimationFrame(animateParticles);
     }
     animateParticles();
   }
 
   /* --------------------------------------------------------------------------
-     6. HERO 3D NEURAL CORE POINTER PARALLAX
+     7. HERO 3D SCULPTURE POINTER PARALLAX
      -------------------------------------------------------------------------- */
   const heroVisual = document.querySelector('.hero-visual');
   const coreRig = document.getElementById('core-rig');
@@ -212,20 +242,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let targetRotY = 0;
     let currentRotX = 0;
     let currentRotY = 0;
-    let isHovering = false;
 
     heroVisual.addEventListener('mousemove', (e) => {
-      isHovering = true;
       const rect = heroVisual.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
 
-      targetRotY = (x / (rect.width / 2)) * 18; // Max 18 deg
-      targetRotX = -(y / (rect.height / 2)) * 18;
+      targetRotY = (x / (rect.width / 2)) * 16;
+      targetRotX = -(y / (rect.height / 2)) * 16;
     }, { passive: true });
 
     heroVisual.addEventListener('mouseleave', () => {
-      isHovering = false;
       targetRotX = 0;
       targetRotY = 0;
     });
@@ -241,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     7. CARD 3D TILT EFFECT (VANILLA JAVASCRIPT)
+     8. CARD 3D TILT EFFECT (VANILLA JAVASCRIPT)
      -------------------------------------------------------------------------- */
   const tiltCards = document.querySelectorAll('[data-tilt]');
 
@@ -255,10 +282,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = ((y - centerY) / centerY) * -6; // subtle tilt
-        const rotateY = ((x - centerX) / centerX) * 6;
+        const rotateX = ((y - centerY) / centerY) * -5;
+        const rotateY = ((x - centerX) / centerX) * 5;
 
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
       }, { passive: true });
 
       card.addEventListener('mouseleave', () => {
@@ -268,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     8. AUDIO SPECTROGRAM & WAVEFORM SIMULATOR CANVAS
+     9. AUDIO SPECTROGRAM & WAVEFORM SIMULATOR CANVAS
      -------------------------------------------------------------------------- */
   const waveCanvas = document.getElementById('waveform-canvas');
   if (waveCanvas && !prefersReducedMotion) {
@@ -286,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
       wCtx.clearRect(0, 0, wWidth, wHeight);
 
       // Draw background frequency grid
-      wCtx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+      wCtx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
       wCtx.lineWidth = 1;
       for (let y = 15; y < wHeight; y += 20) {
         wCtx.beginPath();
@@ -308,8 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const x = i * barWidth;
         const y = (wHeight - barH) / 2;
 
-        // Gradient coloring: red for deepfake anomalies, lime for authentic ranges
-        wCtx.fillStyle = (i > 24 && i < 35) ? 'rgba(239, 68, 68, 0.85)' : 'rgba(187, 244, 74, 0.75)';
+        wCtx.fillStyle = (i > 24 && i < 35) ? 'rgba(239, 68, 68, 0.85)' : 'rgba(187, 244, 74, 0.85)';
         wCtx.fillRect(x + 1, y, barWidth - 2, barH);
       }
 
@@ -320,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     9. ECG HEARTBEAT MONITOR SIMULATOR CANVAS
+     10. ECG HEARTBEAT MONITOR SIMULATOR CANVAS
      -------------------------------------------------------------------------- */
   const ecgCanvas = document.getElementById('ecg-canvas');
   if (ecgCanvas && !prefersReducedMotion) {
@@ -341,19 +367,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       // QRS Complex
       if (cycle >= 42 && cycle < 46) {
-        return mid + 6; // Q
+        return mid + 6;
       }
       if (cycle >= 46 && cycle < 52) {
-        return mid - Math.sin((cycle - 46) / 6 * Math.PI) * 32; // R peak
+        return mid - Math.sin((cycle - 46) / 6 * Math.PI) * 32;
       }
       if (cycle >= 52 && cycle < 56) {
-        return mid + 10; // S
+        return mid + 10;
       }
       // T wave
       if (cycle >= 68 && cycle < 85) {
         return mid - Math.sin((cycle - 68) / 17 * Math.PI) * 11;
       }
-      // Baseline with tiny analog noise
+      // Baseline
       return mid + (Math.sin(t * 0.8) * 0.7);
     }
 
@@ -371,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
       eCtx.clearRect(0, 0, eWidth, eHeight);
 
       // Faint ECG grid
-      eCtx.strokeStyle = 'rgba(34, 211, 238, 0.06)';
+      eCtx.strokeStyle = 'rgba(56, 189, 248, 0.08)';
       eCtx.lineWidth = 1;
       for (let x = 0; x < eWidth; x += 20) {
         eCtx.beginPath();
@@ -382,10 +408,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Draw Trace
       eCtx.beginPath();
-      eCtx.strokeStyle = '#22d3ee';
+      eCtx.strokeStyle = '#38bdf8';
       eCtx.lineWidth = 1.8;
-      eCtx.shadowColor = '#22d3ee';
-      eCtx.shadowBlur = 8;
+      eCtx.shadowColor = '#38bdf8';
+      eCtx.shadowBlur = 6;
 
       for (let i = 0; i < points.length; i++) {
         if (i === 0) eCtx.moveTo(i, points[i]);
@@ -401,15 +427,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     10. INTERACTIVE TERMINAL WIDGET
+     11. INTERACTIVE TERMINAL WIDGET
      -------------------------------------------------------------------------- */
   const terminalOutput = document.getElementById('terminal-output');
   const termButtons = document.querySelectorAll('.term-btn');
 
   const commandResponses = {
-    whoami: 'Vedant Nawghare [AI/ML Engineer & Researcher, B.Tech CSE-DS, SIT Nagpur]',
-    skills: '{\n  "core": ["Data Structures", "Ensemble Models", "Distributed Systems"],\n  "stack": ["Python", "FastAPI", "WebSockets", "Redis", "Docker", "Pytest"]\n}',
-    patents: 'Indian Patent App No. 202521130742 A (Voice Deepfake)\nIndian Patent App No. 202621048319 A (Stacking Crop Price)',
+    whoami: 'Vedant Nawghare [AI/ML Practitioner, B.Tech CSE-DS at SIT Nagpur, Published IEEE Researcher]',
+    skills: '{\n  "languages": ["Python", "SQL", "C", "C++", "Java", "JavaScript", "TypeScript"],\n  "frameworks": ["FastAPI", "Redis", "SQLite", "Docker", "Pytest", "Streamlit"]\n}',
+    patents: 'Indian Patent Application No. 202521130742 A (AI Voice Deepfake Detection)\nIndian Patent Application No. 202621048319 A (Stacking Crop Price Prediction)',
     clear: ''
   };
 
@@ -426,15 +452,14 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        const res = commandResponses[cmd] || 'Command not found';
+        const res = commandResponses[cmd] || 'Command not recognized';
         const formattedRes = res.replace(/\n/g, '<br>');
 
         const cmdBlock = `
           <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">${cmd}</span></div>
-          <div class="t-res text-lime">${formattedRes}</div>
+          <div class="t-res text-lime font-mono">${formattedRes}</div>
         `;
 
-        // Insert before cursor line
         const cursorLine = terminalOutput.querySelector('.t-cursor')?.parentElement;
         if (cursorLine) {
           cursorLine.insertAdjacentHTML('beforebegin', cmdBlock);
@@ -448,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     11. PROJECT FILTERING SYSTEM
+     12. PROJECT FILTERING SYSTEM
      -------------------------------------------------------------------------- */
   const filterTabs = document.querySelectorAll('.filter-tab');
   const projectCards = document.querySelectorAll('.project-card');
@@ -479,7 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     12. REAL-TIME SKILLS SEARCH FILTER
+     13. REAL-TIME SKILLS SEARCH FILTER
      -------------------------------------------------------------------------- */
   const skillSearch = document.getElementById('skill-search');
   const skillTags = document.querySelectorAll('.skill-tag');
@@ -493,16 +518,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = tag.getAttribute('data-name') || tag.textContent.toLowerCase();
         if (name.includes(q)) {
           tag.style.opacity = '1';
-          tag.style.background = q ? 'rgba(187, 244, 74, 0.25)' : '';
+          tag.style.background = q ? 'rgba(132, 204, 22, 0.25)' : '';
           tag.style.borderColor = q ? 'var(--accent-lime)' : '';
         } else {
-          tag.style.opacity = '0.2';
+          tag.style.opacity = '0.25';
           tag.style.background = '';
           tag.style.borderColor = '';
         }
       });
 
-      // Hide clusters with zero matched skills
       skillClusters.forEach(cluster => {
         const visibleTags = cluster.querySelectorAll('.skill-tag[style*="opacity: 1"]');
         if (q && visibleTags.length === 0) {
@@ -515,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     13. CLIPBOARD COPY & TOAST NOTIFICATION
+     14. CLIPBOARD COPY & TOAST NOTIFICATION
      -------------------------------------------------------------------------- */
   const copyBtn = document.getElementById('copy-email-btn');
   const copyText = document.getElementById('copy-text');
@@ -527,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.classList.add('visible');
     setTimeout(() => {
       toast.classList.remove('visible');
-    }, 3200);
+    }, 3000);
   }
 
   if (copyBtn) {
@@ -541,13 +565,13 @@ document.addEventListener('DOMContentLoaded', () => {
           if (copyText) copyText.textContent = 'Copy';
         }, 2500);
       } catch (err) {
-        showToast('Direct: vedant.nawghare35@gmail.com');
+        showToast('vedant.nawghare35@gmail.com');
       }
     });
   }
 
   /* --------------------------------------------------------------------------
-     14. DIRECT MAIL DISPATCH FORM (PURE CLIENT-SIDE)
+     15. DIRECT MAIL DISPATCH FORM (CLIENT-SIDE TRIGGER)
      -------------------------------------------------------------------------- */
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
@@ -575,10 +599,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Encode mailto link
-      const mailtoUrl = `mailto:vedant.nawghare35@gmail.com?subject=${encodeURIComponent(`[Portfolio Inquiry] ${subject}`)}&body=${encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`)}`;
+      const mailtoUrl = `mailto:vedant.nawghare35@gmail.com?subject=${encodeURIComponent(`[Portfolio] ${subject}`)}&body=${encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`)}`;
 
       if (formFeedback) {
-        formFeedback.textContent = 'Opening your email client to dispatch note...';
+        formFeedback.textContent = 'Preparing email in your mail client...';
         formFeedback.className = 'form-feedback text-lime';
       }
 
@@ -587,13 +611,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         contactForm.reset();
-        if (formFeedback) formFeedback.textContent = 'Email dispatch client activated.';
+        if (formFeedback) formFeedback.textContent = 'Email client triggered successfully.';
       }, 1500);
     });
   }
 
   /* --------------------------------------------------------------------------
-     15. LIGHTBOX & CERTIFICATE MODAL
+     16. LIGHTBOX & DOCUMENT MODAL
      -------------------------------------------------------------------------- */
   const mediaModal = document.getElementById('media-modal');
   const modalTitle = document.getElementById('modal-title');
@@ -633,7 +657,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const type = btn.getAttribute('data-type');
       const src = btn.getAttribute('data-src');
-      const title = btn.getAttribute('data-title') || 'Certificate Verification';
+      const title = btn.getAttribute('data-title') || 'Document Verification';
 
       if (type === 'pdf') {
         openModal(title, `<iframe src="${src}#toolbar=0" title="${title}"></iframe>`);
@@ -654,7 +678,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     16. INTERSECTION OBSERVER SCROLL REVEALS
+     17. INTERSECTION OBSERVER SCROLL REVEALS
      -------------------------------------------------------------------------- */
   const revealElements = document.querySelectorAll('.reveal-item');
 
@@ -677,5 +701,5 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('revealed'));
   }
 
-  console.log('Vedant Nawghare Portfolio initialised: Pure HTML5, CSS3, & Vanilla JS.');
+  console.log('Vedant Nawghare Portfolio initialised: Premium Light Theme, Pure HTML5/CSS3/Vanilla JS.');
 });
